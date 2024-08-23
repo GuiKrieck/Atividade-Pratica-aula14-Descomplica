@@ -29,7 +29,7 @@ window.onFormSubmit = function(event){
         addNewEmployee()
         
     } catch(error){
-        alert(`Ocorreu um erro: ${error.message}`);
+        exibirErro(error.message);
     }
 }
 
@@ -85,4 +85,8 @@ function clearFields(){
     nameInput.value = "";
     ageInput.value = "";
     activityInput.value = "";
+}
+
+function exibirErro(erro){
+    alert(`Ocorreu um erro: ${erro}`)
 }
